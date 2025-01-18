@@ -1,25 +1,33 @@
 <div class="dashboard">
   <app-dashboard-topheader></app-dashboard-topheader>
   <div class="body">
-    <div class="left">
-      <h1>Organization Settings</h1>
-      <div class="extras">
-        <div class="budget">
-          <h3>Budget</h3>
-        </div>
-        <div class="job">
-          <i class="material-icons">add</i>
-          <span>Add Filters</span>
-        </div>
-        <div class="search">
-          <i class="material-icons">search</i>
-          <input type="text" name="text" id="text" placeholder="Search" />
+    <div class="subheader">
+      <div class="left">
+        <h1>Organization Settings</h1>
+        <div class="extras">
+          <div class="budget">
+            <h3>Budget</h3>
+          </div>
+          <div class="job">
+            <i class="material-icons">add</i>
+            <span>Add Filters</span>
+          </div>
+          <div class="search">
+            <i class="material-icons">search</i>
+            <input type="text" name="text" id="text" placeholder="Search" />
+          </div>
         </div>
       </div>
+      <div class="right">
+        <button type="button" class="export">Export</button>
+        <button type="button" class="add-budget">Add Budget</button>
+      </div>
     </div>
-    <div class="right">
-      <button type="button" class="export">Export</button>
-      <button type="button" class="add-budget">Add Budget</button>
+    <div class="sidebar-and-main-area">
+      <div class="sidebar">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </div>
+      <div class="main-area">Hello world</div>
     </div>
   </div>
 </div>

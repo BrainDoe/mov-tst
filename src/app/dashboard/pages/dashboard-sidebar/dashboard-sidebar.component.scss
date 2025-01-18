@@ -1,0 +1,58 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // padding: 20px 10px;
+  // box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: width 0.2s ease;
+  min-height: calc(100vh - 60px);
+
+  .menu {
+    padding: 0;
+    margin: 0;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 0.5rem;
+      font-size: 1rem;
+      color: #545454;
+      border-radius: 0.8rem;
+      margin-bottom: 0.8rem;
+      width: 20rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      i {
+        margin-right: 0.8rem;
+        transition: color 0.3s ease;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #ffffff;
+        color: #545454;
+
+        i {
+          color: #545454;
+        }
+      }
+
+      &.active {
+        background-color: #ffffff;
+        color: #545454;
+
+        i {
+          color: #545454;
+        }
+      }
+
+      .material-icons {
+        font-size: 1.2rem;
+        margin-right: 10px;
+        color: #545454;
+      }
+    }
+  }
+}
