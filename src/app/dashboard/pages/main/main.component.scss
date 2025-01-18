@@ -3,4 +3,124 @@
   width: 100%;
   height: 100%;
   padding: 1rem;
+
+  .body {
+    background-color: #efefef;
+    min-height: 2rem;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+      // flex: 2;
+
+      h1 {
+        font-size: 1.5rem;
+        color: #5a5a5a;
+      }
+
+      .extras {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .budget {
+          padding: 0.7rem 0.6rem;
+          border-radius: 0.5rem;
+          margin-right: 0.5rem;
+          display: flex;
+          align-items: center;
+
+          h3 {
+            font-size: 1rem;
+            color: #525152;
+          }
+        }
+
+        .job {
+          padding: 0.6rem 0.6rem;
+          border-radius: 0.5rem;
+          margin-right: 0.5rem;
+          display: flex;
+          align-items: center;
+          border: 1px dotted #cccccc;
+          cursor: pointer;
+
+          i {
+            font-size: 1.3rem;
+            text-align: center;
+            color: #545454;
+            display: inline-block;
+          }
+
+          span {
+            background-color: #f0eeef;
+            font-size: 1rem;
+            color: #525152;
+            margin-left: 0.5rem;
+            display: inline-block;
+          }
+        }
+
+        .search {
+          padding: 0.5rem 0.6rem;
+          border-radius: 0.5rem;
+          background-color: #f0eeef;
+          margin-right: 0.5rem;
+          width: 7rem;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          i {
+            font-size: 1.9rem;
+            text-align: center;
+            color: #525152;
+          }
+
+          input {
+            border: none;
+            background-color: #f0eeef;
+            outline: none;
+            font-size: 1rem;
+            color: #525152;
+            border: none;
+            margin-left: 0.5rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .right {
+      justify-self: self-end;
+
+      button {
+        display: inline-block;
+        margin-right: 0.5rem;
+        padding: 0.7rem 1.2rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+
+        &.add-budget {
+          background-color: #357961;
+          color: #ffffff;
+        }
+        &.export {
+          background-color: #e5e2e3;
+          color: #525152;
+        }
+      }
+    }
+  }
 }
