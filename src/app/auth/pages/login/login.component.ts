@@ -20,10 +20,10 @@ export class LoginComponent {
 
   constructor(private formBuilder: FormBuilder, private router: Router) {}
 
-  validateEmail() {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    this.isEmailValid = emailRegex.test(this.email);
-  }
+  // validateEmail() {
+  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   this.isEmailValid = emailRegex.test(this.email);
+  // }
 
   switchTab(tab: 'signin' | 'signup') {
     this.activeTab = tab;
