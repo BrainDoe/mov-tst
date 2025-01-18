@@ -1,0 +1,153 @@
+.card {
+  padding: 1rem 0.8rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+
+  .card-top {
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    .amount-role {
+      div {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        i,
+        span {
+          color: #545454;
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin-left: 0.4rem;
+        color: #746c6c;
+      }
+    }
+
+    .more {
+      .dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        background-color: #f7f5f6;
+        padding: 1rem 0.8rem;
+        border-radius: 0.5rem;
+
+        .dot {
+          width: 0.3rem;
+          height: 0.3rem;
+          border-radius: 50%;
+          background-color: #545454;
+        }
+      }
+    }
+  }
+
+  .progress-bar-container {
+    width: 100%;
+    margin: 2rem 0 2rem 0.4rem;
+    margin-left: 0.4rem;
+    margin-top: 2rem;
+
+    .progress-bar {
+      width: 100%;
+      height: 0.3rem;
+      background-color: #f0f0f0;
+      border-radius: 1rem;
+      overflow: hidden;
+      position: relative;
+
+      .progress {
+        height: 100%;
+        background-color: #489f73;
+        border-radius: 10px 0 0 10px;
+        transition: width 0.3s ease-in-out;
+
+        // &.progress-color {
+        //   background-color: #f3ce45;
+        // }
+      }
+    }
+
+    .progress-percentage-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .progress-percentage {
+        margin-top: 0.4rem;
+        font-size: 1rem;
+        color: #545454;
+      }
+    }
+  }
+
+  .details {
+    .total-amount,
+    .start-date,
+    .end-date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .total-amount {
+      p {
+        font-size: 1rem;
+        color: #686a6b;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        i,
+        span {
+          font-size: 1rem;
+          color: #686a6b;
+        }
+      }
+    }
+
+    .start-date,
+    .end-date {
+      p {
+        font-size: 1rem;
+        color: #686a6b;
+      }
+
+      span {
+        font-size: 1rem;
+        color: #686a6b;
+      }
+    }
+  }
+
+  .skill-set {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+      display: inline-block;
+      border: none;
+      background-color: #f7f5f6;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      color: #545454;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<div class="card">
+  <div class="card-top">
+    <div class="amount-role">
+      <div>
+        <i class="material-icons">attach_money</i>
+        <span>{{ cardData.amount }}</span>
+      </div>
+      <h4>{{ cardData.role }}</h4>
+    </div>
+    <div class="more">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+  <div class="progress-bar-container">
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div
+        class="progress"
+        [style.width.%]="cardData.progressValue"
+        [style.background-color]="getProgressColor(cardData.progressValue)"
+      ></div>
+    </div>
+
+    <!-- Percentage Display -->
+    <div class="progress-percentage-container">
+      <div
+        class="progress-percentage"
+        [style.color]="getProgressColor(cardData.progressValue)"
+      >
+        {{ cardData.progressValue }}%
+      </div>
+      <div
+        class="progress-percentage"
+        [style.color]="getProgressColor(cardData.progressValue)"
+      >
+        {{ cardData.progressValue }}%
+      </div>
+    </div>
+  </div>
+  <div class="details">
+    <div class="total-amount">
+      <p>Total Amount</p>
+      <div>
+        <i class="material-icons">attach_money</i>
+        <span>{{ cardData.totalAmount }}</span>
+      </div>
+    </div>
+    <div class="start-date">
+      <p>Start Date</p>
+      <span>{{ cardData.startDate }}</span>
+    </div>
+    <div class="end-date">
+      <p>End Date</p>
+      <span>{{ cardData.endDate }}</span>
+    </div>
+  </div>
+  <div class="skill-set">
+    <button *ngFor="let skills of cardData.skillSet" type="button">
+      {{ skills }}
+    </button>
+  </div>
+</div>
