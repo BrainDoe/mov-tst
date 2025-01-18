@@ -72,14 +72,22 @@
         </div>
       </div>
 
-      <!-- Submit Button -->
       <button
-        [disabled]="loginForm['invalid']"
+        [disabled]="loginFormGroup.invalid || isLoading"
         type="submit"
         class="submit-button"
+        (click)="onSubmit()"
       >
-        Continue
+        <ng-container *ngIf="!isLoading; else loadingTemplate"
+          >Continue</ng-container
+        >
+        <ng-template #loadingTemplate> Loading... </ng-template>
       </button>
+      <small
+        *ngIf="authError"
+        style="color: red; font-size: 1rem; margin-top: 1rem"
+        >{{ errorMessage }}</small
+      >
 
       <!-- Divider -->
       <div class="divider">
