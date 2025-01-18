@@ -1,0 +1,125 @@
+<div class="login-page">
+  <!-- Left Section -->
+  <div class="left-section">
+    <form [formGroup]="loginFormGroup" class="main-content">
+      <!-- Logo Header -->
+      <div class="logo-header">
+        <img src="assets/images/logo.PNG" alt="Logo" class="logo" />
+        <span class="company-name">SmartSave</span>
+      </div>
+
+      <!-- Middle Section -->
+      <div class="welcome-section">
+        <h1 class="welcome-title">Welcome Back</h1>
+        <p class="welcome-text">Welcome back, Please enter your details</p>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs">
+        <button
+          class="tab-button"
+          [class.active]="activeTab === 'signin'"
+          (click)="switchTab('signin')"
+        >
+          Sign In
+        </button>
+        <button
+          class="tab-button"
+          [class.active]="activeTab === 'signup'"
+          (click)="switchTab('signup')"
+        >
+          Sign Up
+        </button>
+      </div>
+
+      <!-- Email Input -->
+      <div class="input-container">
+        <div class="form-group">
+          <label
+            [class.floating]="
+              loginForm['email'].value || loginForm['email'].touched
+            "
+            for="email"
+            >Email Address</label
+          >
+          <div class="input-wrapper">
+            <i class="material-icons email-icon">email</i>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              formControlName="email"
+              (blur)="checkInputValue($event)"
+              (focus)="checkInputValue($event)"
+            />
+            <i
+              class="material-icons check-icon"
+              *ngIf="loginForm['email'].valid && loginForm['email'].touched"
+              >check_circle</i
+            >
+          </div>
+          <small
+            style="color: rgb(209, 62, 62)"
+            *ngIf="loginForm['email'].invalid && loginForm['email'].touched"
+          >
+            <span *ngIf="loginForm['email'].errors?.['required']"
+              >Email is Required</span
+            >
+            <span *ngIf="loginForm['email'].errors?.['email']"
+              >Please enter a valid email address</span
+            >
+          </small>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        [disabled]="loginForm['invalid']"
+        type="submit"
+        class="submit-button"
+      >
+        Continue
+      </button>
+
+      <!-- Divider -->
+      <div class="divider">
+        <hr />
+        <span>Or Continue With</span>
+        <hr />
+      </div>
+
+      <!-- Social Media Buttons -->
+      <div class="social-buttons">
+        <div class="social-button google">
+          <img src="assets/images/google-icon.svg" alt="" />
+        </div>
+        <button class="social-button apple">
+          <img src="assets/images/apple-icon.svg" alt="" />
+        </button>
+        <button class="social-button facebook">
+          <img
+            width="30px"
+            height="30px"
+            src="assets/images/facebook-icon.svg"
+            alt=""
+          />
+        </button>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <p class="footer-text">
+        Join the million of smart investors who trust us to manage their
+        finaances. Login to access your personalized dashboard, track your
+        portfolio performances and make informed investment decisions.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Right Section -->
+  <div class="right-section">
+    <div class="gradient-overlay">
+      <img src="assets/logo.png" alt="Logo" class="center-logo" />
+    </div>
+  </div>
+</div>

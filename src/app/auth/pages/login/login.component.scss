@@ -1,0 +1,299 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  .left-section {
+    flex: 1;
+    background: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 1rem;
+    text-align: center;
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 30rem;
+      margin: 0 auto;
+
+      .logo-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7rem;
+
+        .logo {
+          height: 3rem;
+          margin-right: 10px;
+        }
+
+        .company-name {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #333333;
+        }
+      }
+
+      .welcome-section {
+        text-align: center;
+        margin-bottom: 1rem;
+
+        .welcome-title {
+          font-size: 2.4rem;
+          font-weight: bold;
+          color: #272727;
+          margin-bottom: 1.5rem;
+        }
+
+        .welcome-text {
+          font-size: 1.6rem;
+          color: #d2d2d2;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .auth-tabs {
+        display: flex;
+        margin-bottom: 1rem;
+        background-color: #f0f0f2;
+        border-radius: 0.5rem;
+        padding: 0.2rem;
+
+        .tab-button {
+          padding: 0.8rem 2.3rem;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+
+          &.active {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          &:not(.active) {
+            background-color: #f0f0f2;
+            color: #666666;
+          }
+        }
+      }
+
+      .input-container {
+        width: 100%;
+        margin-bottom: 1.3rem;
+
+        .form-group {
+          width: 100%;
+          position: relative;
+
+          label {
+            font-size: 1rem;
+            color: teal;
+            display: inline-block;
+            position: absolute;
+            top: 40%;
+            left: 15%;
+            background-color: #ffffff;
+            pointer-events: none;
+            transition: 0.5s ease;
+          }
+
+          .floating {
+            top: 1%;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #999;
+          }
+
+          .input-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 0.7rem 0.9rem;
+            border: 1px solid #cccccc;
+
+            input {
+              width: 100%;
+              display: block;
+              background: none;
+              appearance: none;
+              outline: none;
+              background-color: #ffffff;
+              border: none;
+              padding: 0.3rem 0px 0px 0.3rem;
+              font-size: 1rem;
+              font-weight: bolder;
+            }
+
+            .email-icon {
+              font-size: 2rem;
+              color: #999999;
+            }
+            .check-icon {
+              font-size: 2rem;
+              color: rgb(72, 196, 72);
+            }
+
+            &:focus,
+            &:active {
+              outline: none;
+              color: teal;
+              background-color: #ffffff;
+            }
+          }
+
+          input:focus + label,
+          input.has-value + label {
+            top: 0;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #999;
+          }
+        }
+
+        // .input-box {
+        //   display: flex;
+        //   align-items: center;
+        //   border: 1px solid #cccccc;
+        //   border-radius: 5px;
+        //   padding: 10px;
+
+        //   .email-icon {
+        //     margin-right: 10px;
+        //     color: #999999;
+        //   }
+
+        //   .email-input {
+        //     flex: 1;
+        //     border: none;
+        //     outline: none;
+        //     font-size: 16px;
+        //   }
+
+        //   .valid-icon {
+        //     margin-left: 10px;
+        //     color: #28a745;
+        //   }
+        // }
+      }
+
+      .submit-button {
+        width: 100%;
+        padding: 1.3rem;
+        font-size: 1.3rem;
+        color: #ffffff;
+        background-color: #2a64f6;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0d57a7;
+        }
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        margin: 1.5rem 0;
+        width: 100%;
+
+        hr {
+          flex: 1;
+          border: 0;
+          height: 1px;
+          background: #cccccc;
+        }
+
+        span {
+          margin: 0 0.5rem;
+          font-size: 1rem;
+          color: #666;
+        }
+      }
+
+      .social-buttons {
+        display: flex;
+        justify-content: center;
+
+        .social-button {
+          margin: 0 10px;
+          width: 3rem;
+          height: 3rem;
+          border: none;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          img {
+            width: 1.5rem;
+          }
+
+          &.google {
+            background-color: #ffffff;
+            color: #ffffff;
+            border: 1px solid #cccccc;
+          }
+
+          &.apple {
+            background-color: #555555;
+            color: #ffffff;
+          }
+
+          &.facebook {
+            background-color: #1877f2;
+            color: #3975eb;
+          }
+        }
+      }
+    }
+
+    .footer {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 40rem;
+
+      .footer-text {
+        font-size: 1rem;
+        color: #666666;
+        line-height: 1.6rem;
+      }
+    }
+  }
+
+  .right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .gradient-overlay {
+      width: 100%;
+      height: 100%;
+      background: rgb(238, 174, 202);
+      background: linear-gradient(
+        90deg,
+        rgb(142, 101, 180) 0%,
+        rgb(56, 26, 106) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .center-logo {
+        width: 100px;
+      }
+    }
+  }
+}
